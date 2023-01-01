@@ -1,0 +1,42 @@
+<idea-plugin>
+  <id>code_recommendation_plugin</id>
+  <name>CodeRecommendationPlugin</name>
+  <version>1.0</version>
+  <vendor email="1182747827@qq.com" url="https://github.com/crystal-sy" />
+
+  <description><![CDATA[
+      Code recommendation tool based on deep learning<br>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Initialization tool<br>
+      <ul>
+        <li>since 2022-02-10</li>
+      </ul>
+    ]]>
+  </change-notes>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.lang</depends>
+  <depends>com.intellij.modules.java</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="com.ppcode.ideaplugin.altInsert" class="com.ppcode.ideaplugin.AltInsertAction" text="Code_recommendation"
+      description="CODE RECOMMENDATION">
+      <!-- alt+insert快捷键组的第一个菜单 -->
+      <add-to-group group-id="GenerateGroup" anchor="first"/>
+      <!-- 快捷键 ctrl+Num-7 -->
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl NUMPAD7"/>
+    </action>
+  </actions>
+</idea-plugin>
